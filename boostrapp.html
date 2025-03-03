@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kayıt Ekranı</title>
+  <style>
+    body {
+      background-color: yellow;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      width: 50%;
+      margin: auto;
+      padding: 20px;
+    }
+    h1 {
+      color: blue;
+    }
+    h2 {
+      color: red;
+    }
+    input, select, button {
+      margin-top: 10px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Kayıt Ekranı</h1>
+  <h2>Deneme Başlık</h2>
+
+  <label for="ad">Adınız:</label>
+  <input type="text" id="ad" name="ad">
+
+  <label>Cinsiyet:</label>
+  <input type="radio" id="erkek" name="cinsiyet" value="Erkek">
+  <label for="erkek">Erkek</label>
+  <input type="radio" id="kadin" name="cinsiyet" value="Kadın">
+  <label for="kadin">Kadın</label>
+
+  <label>Hobiler:</label>
+  <input type="checkbox" id="kitap" name="hobi" value="Kitap">
+  <label for="kitap">Kitap Okuma</label>
+  <input type="checkbox" id="spor" name="hobi" value="Spor">
+  <label for="spor">Spor Yapmak</label>
+
+  <label for="sehir">Şehir Seçiniz:</label>
+  <select id="sehir" name="sehir">
+    <option value="">Lütfen seçiniz...</option>
+    <option value="istanbul">İstanbul</option>
+    <option value="ankara">Ankara</option>
+    <option value="izmir">İzmir</option>
+  </select>
+
+  <button type="submit">Gönder</button>
+</div>
+
+</body>
+</html>
