@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #ffd6e0; }
+    .header { background: #ff4d79; color: white; text-align: center; padding: 20px; font-size: 24px; position: relative; }
+    .header:after { content: "🎀"; position: absolute; right: 20px; font-size: 30px; }
+    .sidebar { width: 250px; background: #ff80a6; padding: 20px; height: 100vh; position: fixed; }
+    .sidebar a { display: block; padding: 10px; margin-bottom: 10px; text-decoration: none; color: white; background: #ff4d79; text-align: center; border-radius: 5px; }
+    .sidebar a:hover { background: #ff1a4d; }
+    .content { margin-left: 270px; padding: 20px; }
+    .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
+    input, button { margin: 5px 0; padding: 10px; width: 100%; }
+</style>
+</head>
+<body>
+<div class="header">Ayşimm Fashion HELLO!🎀</div>
+<div class="sidebar">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayşimm Fashion HELLO!</title>
+
+    <a href="#" onclick="showPage('customer')">Müşteriler</a>
+    <a href="#" onclick="showPage('product')">Ürünler</a>
+    <a href="#" onclick="showPage('order')">Siparişler</a>
+    <a href="#" onclick="showPage('shipment')">Kargolar</a>
+</div>
+<div class="content">
+    <div id="customer" class="page">
+        <div class="card">
+            <h2>Müşteri Ekle</h2>
+            <form>
+                <input type="text" placeholder="Ad">
+                <input type="text" placeholder="Soyad">
+                <input type="text" placeholder="GSM">
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Adres">
+                <input type="text" placeholder="Şehir">
+                <input type="text" placeholder="Cinsiyet">
+                <button type="submit">Ekle</button>
+            </form>
+        </div>
+    </div>
+    <div id="product" class="page" style="display: none;">
+        <div class="card">
+            <h2>Ürün Ekle</h2>
+            <form>
+                <input type="text" placeholder="Ad">
+                <input type="text" placeholder="Stok Kodu">
+                <input type="text" placeholder="Kategori">
+                <input type="text" placeholder="Stok Durumu">
+                <input type="number" placeholder="Fiyat">
+                <input type="text" placeholder="Para Birimi">
+                <input type="file">
+                <button type="submit">Ekle</button>
+            </form>
+        </div>
+    </div>
+    <div id="order" class="page" style="display: none;">
+        <div class="card">
+            <h2>Sipariş Ekle</h2>
+            <form>
+                <input type="text" placeholder="Sipariş Veren">
+                <input type="text" placeholder="Ürün">
+                <input type="number" placeholder="Adet">
+                <input type="number" placeholder="Birim Fiyat">
+                <input type="number" placeholder="Toplam Fiyat">
+                <button type="submit">Ekle</button>
+            </form>
+        </div>
+    </div>
+    <div id="shipment" class="page" style="display: none;">
+        <div class="card">
+            <h2>Kargo Ekle</h2>
+            <form>
+                <input type="text" placeholder="Sipariş">
+                <input type="date" placeholder="Kargo Tarihi">
+                <input type="date" placeholder="Teslim Tarihi">
+                <button type="submit">Ekle</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    function showPage(pageId) {
+        document.querySelectorAll('.page').forEach(page => page.style.display = 'none');
+        document.getElementById(pageId).style.display = 'block';
+    }
+</script>
+</body>
+</html>
